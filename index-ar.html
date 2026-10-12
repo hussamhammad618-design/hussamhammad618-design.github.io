@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="ar">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>حسام الدين الحمد | الملف المهني والسجل الميداني</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Favicon -->
+<link href="Housam Aldeen Ibrahim Alhamad-Profil Photo.jpg" rel="icon" type="image/x-icon"/>
+<meta content="الملف المهني والسيرة الذاتية التفاعلية للمهندس حسام الدين إبراهيم الحمد." name="description"/>
+<meta content="Housam Aldeen Ibrahim Alhamad" name="author"/>
+<style>
+        /* ==========================================
+           1. GLOBAL STYLES & VARIABLES
+           ========================================== */
+        :root {
+            --primary-color: #0d47a1;
+            --secondary-color: #1565c0;
+            --accent-color: #00e676;
+            --bg-color: #f4f6f9;
+            --text-color: #333333;
+            --white: #ffffff;
+            --img-highlight: #ff0055;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)), url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        /* ==========================================
+           2. LOGO SPLASH SCREEN
+           ========================================== */
+        .splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #0a192f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOutSplash 1s ease-in-out 2.8s forwards;
+        }
+
+        .splash-logo {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid var(--accent-color);
+            object-fit: cover;
+            animation: zoomIn 1.5s ease-in-out;
+            outline: 3px solid var(--img-highlight);
+        }
+
+        .splash-text {
+            color: var(--white);
+            margin-top: 15px;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        @keyframes fadeOutSplash {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        /* ==========================================
+           3. NAVIGATION & DROPDOWN MENU
+           ========================================== */
+        header {
+            background-color: rgba(13, 71, 161, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            position: relative;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-menu li {
+            position: relative;
+        }
+
+        .nav-menu a, .dropdown-btn {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 10px 18px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .nav-menu a:hover, .dropdown-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--accent-color);
+        }
+
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--white);
+            min-width: 220px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 1001;
+            text-align: center;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .dropdown-content a:hover {
+             color: var(--primary-color);
+            background-color: #b78aa5;
+            color: #c0caaa;
+             outline: 2px solid #ffffff;
+             transform: scale(1.35);
+
+
+
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .lang-switch {
+            position: absolute;
+            right: 20px;
+            background: var(--accent-color);
+            color: #000;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            text-decoration: none;
+        }
+
+        /* ==========================================
+           4. MAIN CONTENT & CV SECTIONS
+           ========================================== */
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-color);
+            outline: 1px dashed var(--img-highlight);
+        }
+
+        .profile-info {
+            flex: 1;
+        }
+
+        .profile-info h1 {
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 5px;
+        }
+
+        .profile-info h3 {
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .meta-item {
+            background: #eef3fc;
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        .section-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            border-bottom: 2px solid #eef3fc;
+            padding-bottom: 10px;
+        }
+
+        /* Timeline / Experience */
+        .timeline {
+            position: relative;
+            border-left: 3px solid var(--primary-color);
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .job-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .company-name {
+            font-weight: 600;
+            color: #444;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .job-bullets {
+            list-style-type: square;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .job-bullets li {
+            margin-bottom: 5px;
+        }
+
+        /* Competencies & Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+ 
+
+        .skill-box {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        .skill-box h4 {
+            color: var(--primary-color);
+            margin-bottom: 6px;
+        }
+
+        .skill-box p {
+            font-size: 0.9rem;
+            color: #555;
+                        transition: transform 0.5s ease;
+                        border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .skill-box:hover {
+                 color: #ffffff; /* تحويل النص والأيقونة للون الأبيض */
+    transform: translateY(-11px);
+    box-shadow: 0 8px 18px rgba(10, 236, 33, 0.4);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 25px 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: inline-block;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            margin: 40px 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+        }
+
+        .img-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-bottom: 4px solid var(--img-highlight);
+        }
+
+        .gallery-card:hover .gallery-img {
+            transform: scale(1.08);
+        }
+
+        .caption-box {
+            padding: 18px;
+            background: var(--white);
+        }
+
+        .caption-title {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 6px;
+            font-size: 1.05rem;
+        }
+
+        .caption-text {
+            font-size: 0.9rem;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .date-tag {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            background: #f0f0f0;
+            padding: 3px 8px;
+            border-radius: 4px;
+            color: #777;
+        }
+
+        .training-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .training-list li {
+            background: #f0f4f9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--accent-color);
+        }
+        .training-list li:hover {
+    background-color: #c62887;
+    color: #ffffff;
+    outline: 2px solid #ffffff; /* إضافة إطار أبيض داخلي */
+}
+               .contact-list li {
+            background: #f0f8f9;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border-left: 3px solid var(--accent-color);
+               }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .profile-card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-menu {
+                gap: 10px;
+            }
+
+            .nav-menu a, .dropdown-btn {
+                padding: 8px 10px;
+                font-size: 0.9rem;
+            }
+
+            .lang-switch {
+                position: static;
+                margin-left: 10px;
+            }
+
+            header nav {
+                flex-wrap: wrap;
+            }
+        }
+        /* 1. تخصيص خلفية السيكشن باللون الأزرق */
+#contact.contact-blue-section {
+    background-color: var(--primary-color, #0d47a1); /* لون أزرق */
+    color: #ffffff;
+}
+
+/* تعديل لون عنوان السيكشن والخط السفلي ليتناسب مع الخلفية الزرقاء */
+#contact.contact-blue-section .section-title {
+    color: #ffffff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 2. حاوية عناصر التواصل */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+/* 2. حاوية عناصر السيكتور*/
+.stats-section {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+                border-radius: 8px;
+            overflow: hidden;
+
+}
+
+    .stats-section:hover{
+        transform: translateY(-11px);
+            background-color: #a6b5b8;
+ 
+    }
+  
+
+.stats-section :hover{
+             transform: translateY(-11px);
+            box-shadow: 0 8px 24px rgba(212, 202, 202, 0.012);
+    background-color: #b1f5b2;
+}
+/* تنسيق تأثير الهوفر لقسم التعليم */
+.education-box {
+    background: #f8fafc;
+    padding: 15px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    transition: all 0.3s ease; /* لتنعيم حركة الانتقال عند مرور الماوس */
+}
+
+.education-box:hover {
+    background-color: var(--primary-color); /* تحويل الخلفية للأزرق الداكن */
+    transform: translateY(-4px);              /* رفع المربع للأعلى قليلاً */
+    box-shadow: 0 8px 18px rgba(145, 190, 21, 0.3); /* إضافة ظل متناسق */
+}
+
+/* تحويل النصوص داخل المربع للون الأبيض عند الهوفر لضمان وضوحها */
+.education-box:hover h3, 
+.education-box:hover p {
+    color: #ffffff !important;
+}
+
+/* 3. تنسيق كل مربع تواصل بشكل منفصل */
+.contact-card {
+    background-color: #ffffff; /* مربع أبيض لتطريز المعلومات */
+    color: #333333;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* 4. تأثير الـ Hover باللون الأحمر عند مرور الماوس */
+.contact-card:hover {
+    background-color: #e53935; /* لون أحمر حيوي */
+    color: #ffffff; /* تحويل النص والأيقونة للون الأبيض */
+    transform: translateY(-4px); /* رفع المربع للأعلى قليلاً */
+    box-shadow: 0 8px 18px rgba(229, 57, 53, 0.4); /* ظل أحمر متناسق */
+}
+ 
+    
+
+        /* Arabic / RTL adjustments */
+        html, body { direction: rtl; }
+        body { text-align: right; }
+        .lang-switch { right: auto; left: 20px; }
+        .timeline { border-left: 0; border-right: 3px solid var(--primary-color); padding-left: 0; padding-right: 20px; margin-left: 0; margin-right: 10px; }
+        .timeline-item::before { left: auto; right: -27px; }
+        .job-bullets { padding-left: 0; padding-right: 20px; }
+        .skill-box, .training-list li, .contact-list li { border-left: 0; border-right: 4px solid var(--primary-color); }
+        .training-list li { border-right-width: 3px; border-right-color: var(--accent-color); }
+        img[style*="float: right"] { float: left !important; }
+        .dropdown-content { text-align: center; }
+        .meta-info { justify-content: flex-start; }
+        @media (max-width: 768px) {
+            .lang-switch { position: static; margin-right: 10px; margin-left: 0; }
+            .timeline { margin-right: 8px; padding-right: 16px; }
+            .timeline-item::before { right: -23px; }
+        }
+
+</style>
+</head>
+<body>
+<!-- 1. SPLASH SCREEN WITH LOGO -->
+<div class="splash-screen">
+<img alt="شعار حسام الدين الحمد" class="splash-logo" src="Housam Aldeen Ibrahim Alhamad-Profil Photo.jpg" style="background-color: var(--img-highlight);"/>
+<div class="splash-text">م. حسام الدين الحمد</div>
+</div>
+<!-- 2. NAVIGATION BAR -->
+<header>
+<nav>
+<ul class="nav-menu">
+<a href="#contact">تواصل</a>
+<li><a href="#Latest-news">آخر الأخبار</a></li>
+<li class="dropdown">
+<span class="dropdown-btn">الأقسام والأعمال ▼</span>
+<div class="dropdown-content">
+<a href="#experience">الخبرات المهنية</a>
+<a href="#education">التعليم</a>
+<a href="#skills">الكفاءات والمهارات</a>
+<a href="#sectors">القطاعات</a>
+<a href="#gallery">معرض الصور الميدانية</a>
+<a href="#trainings">التدريبات</a>
+</div>
+</li>
+<li><a href="#about">نبذة عني</a></li>
+</ul>
+<a aria-label="عرض النسخة الإنجليزية" class="lang-switch" href="./index.html">English</a>
+</nav>
+</header>
+<div class="container">
+<!-- 3. PROFILE HERO SECTION -->
+<section class="profile-card" id="about">
+<img alt="حسام الدين إبراهيم الحمد" class="profile-img" src="Housam Aldeen Ibrahim Alhamad-Profil Photo.jpg" style="border-color: var(--img-highlight);"/>
+<div class="profile-info">
+<h1>حسام الدين إبراهيم الحمد</h1>
+<h3>المتابعة والتقييم والمساءلة والتعلّم (MEAL) | إدارة البيانات والمعلومات</h3>
+<div class="meta-info">
+<!-- الموقع -->
+<a class="meta-item click-item bg-location" href="https://maps.google.com/?q=Raqqa,Syria" target="_blank">📍 الرقة، سوريا</a>
+<!-- تاريخ الميلاد (عنصر غير قابل للنقر) -->
+<span class="meta-item bg-birth">🎂 19 سبتمبر 1996</span>
+</div>
+<p>متخصص في المتابعة والتقييم والمساءلة والتعلّم (MEAL)</p>
+    
+   <P>وإدارة المعلومات، ولديه خبرة في دعم البرامج الإنسانية في قطاعات المياه والإصحاح والنظافة (WASH)</P>
+     <P>والأمن الغذائي وسبل العيش (FSL)</P>  
+     <P>والمأوى والبنية التحتية، والحماية، والتعليم، والصحة، والتعافي المبكر (ERL)</P> 
+      <P> وجمع البيانات وضمان جودتها، وآليات المساءلة، وتقييم الاحتياجات، ومتابعة ما بعد التوزيع</P> 
+    <P> والإغاثة. تشمل خبرته متابعة تنفيذ البرامج، وتتبع المؤشرات </P> 
+    <P></P>  (PDM)، ومجموعات النقاش المركزة (FGDs)، والمقابلات مع المخبرين الرئيسيين (KIIs)، وإعداد التقارير.</p>
+</div>
+</section>
+<!-- 5. EDUCATION -->
+<!-- سكشن التعليم والأكاديميا مع دعم الهوفر -->
+<section class="section-card" id="education">
+<h2 class="section-title">التعليم</h2>
+<div style="display: flex; flex-direction: column; gap: 15px;">
+<!-- الجامعة الافتراضية السورية -->
+<div class="education-box">
+<div>
+<h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 5px; transition: color 0.3s;">درجة الماجستير في علوم الحاسوب (قيد الدراسة حالياً)</h3>
+<p style="font-weight: 600; color: #555; margin: 0; transition: color 0.3s;">الجامعة الافتراضية السورية (SVU) </p>
+</div>
+<img alt="شعار الجامعة الافتراضية السورية" src="svu-logo.png" style="width: 55px; height: 55px; object-fit: contain; flex-shrink: 0; border-radius: 4px;"/>
+</div>
+<!-- جامعة الفرات -->
+<div class="education-box">
+<div>
+<h3 style="color: var(--primary-color); font-size: 1.1rem; margin-bottom: 5px; transition: color 0.3s;">درجة البكالوريوس في هندسة التصميم الميكانيكي والإنتاج</h3>
+<p style="font-weight: 600; color: #555; margin: 0; transition: color 0.3s;">جامعة الفرات | التخرج في ديسمبر 2021</p>
+</div>
+<img alt="شعار جامعة الفرات" src="alfurat-logo.png" style="width: 55px; height: 55px; object-fit: contain; flex-shrink: 0; border-radius: 4px;"/>
+</div>
+</div>
+</section>
+
+<!-- 4. PROFESSIONAL EXPERIENCE -->
+<section class="section-card" id="experience">
+<h2 class="section-title">الخبرات المهنية</h2>
+<div class="timeline">
+<!-- Job 1 -->
+<div class="timeline-item">
+<div class="job-title">مساعد المتابعة والتقييم والمساءلة والتعلّم (MEAL)
+                  <img alt="شعار منظمة PUI" src="PUI.png" style="float: right; max-height: 65px; width: auto; object-fit: contain;"/>
+</div>
+<div class="company-name">Premiere Urgence Internationale (PUI)</div>
+<div class="job-date">يوليو 2026 – حتى الآن</div>
+<ul class="job-bullets">
+<li>تنفيذ خطط المتابعة الميدانية والحفاظ على جداول متابعة الأنشطة في مشاريع المأوى والمياه والإصحاح والنظافة (WASH) والأمن الغذائي وسبل العيش (FSL).</li>
+<li>استخدام أدوات جمع البيانات الرقمية، بما فيها KoboToolbox، ودعم المتطوعين المجتمعيين والباحثين الميدانيين في اتباع بروتوكولات جمع البيانات.</li>
+<li>تجميع بيانات مستوى المحافظة وتنظيمها لإعداد التقارير الشهرية والفصلية، وتحديث جداول تتبع المؤشرات.</li>
+<li>إجراء التنظيف الأولي للبيانات وفحوصات الجودة، وتحديد الحالات غير المعتادة والتناقضات مع توثيق الملاحظات الداعمة.</li>
+<li>تيسير ودعم مجموعات النقاش المركزة (FGDs)، والمقابلات مع المخبرين الرئيسيين (KIIs)، واستبيانات المتابعة بعد التوزيع (PDM).</li>
+<li>دعم التقييمات القبلية والمرحلية والنهائية من خلال جمع البيانات ميدانياً، وتوثيق الدروس المستفادة، وإعداد التقارير.</li>
+</ul>
+</div>
+<!-- Job 2 -->
+<div class="timeline-item">
+<div class="job-title">مسؤول المتابعة والتقييم والمساءلة والتعلّم (MEAL)
+                        <img alt="شعار منظمة بهار" src="BAHAR.png" style="float: right; max-height: 45px; width: auto; object-fit: contain;"/>
+</div>
+<div class="company-name">منظمة بهار (BAHAR)</div>
+<div class="job-date">يناير 2025 – يوليو 2026</div>
+<ul class="job-bullets">
+<li>إعداد خطط عمل شهرية للمتابعة والتقييم والمساءلة والتعلّم وتحديد مؤشرات لمتابعة التقدم نحو أهداف المشاريع.</li>
+<li>إدارة معلومات البرامج وإعداد تقارير مرئية وعروض للبيانات باستخدام Power BI.</li>
+<li>متابعة أنشطة المشاريع ونفقاتها ومدى التقدم نحو النتائج المخطط لها، ودعم متابعة خطوات التنفيذ.</li>
+<li>تنفيذ تقييمات للاحتياجات باستخدام الاستبيانات وجداول الكميات (BOQs) ومجموعات النقاش المركزة (FGDs).</li>
+<li>متابعة رضا المستفيدين والمجتمع ودعم آليات الشكاوى والتغذية الراجعة، بما في ذلك التتبع والتوثيق.</li>
+<li>متابعة جودة السلع والخدمات المقدمة من الموردين ومتابعة إجراءات المناقصات والمشتريات، بما في ذلك جلسات فتح العروض.</li>
+<li>جمع الدروس المستفادة والمعلومات التعليمية من تنفيذ المشاريع لدعم تحسين البرامج.</li>
+</ul>
+</div>
+<!-- Job 3 -->
+<div class="timeline-item">
+<div class="job-title">مدخل بيانات
+                     <img alt="IDA" src="IDA.png" style="float: right; max-height: 90px; width: 90px; object-fit: contain;"/>
+</div>
+<div class="company-name">IDA-Germany</div>
+<div class="job-date">سبتمبر 2024 – أكتوبر 2024</div>
+<ul class="job-bullets">
+<li>جمع بيانات المرضى وإدخالها عبر نظام المعلومات الصحية والحفاظ على دقة سجلات المستفيدين.</li>
+<li>إعداد تقارير دورية وتحليلات لسجلات المستفيدين وتقديمها إلى المدير المباشر.</li>
+<li>تنظيم الملفات والوثائق لتسهيل تصنيفها واسترجاعها، ودعم إعداد التقارير الإدارية.</li>
+</ul>
+</div>
+<!-- Job 4 -->
+<div class="timeline-item">
+<div class="job-title">مسؤول المتابعة والتقييم والمساءلة والتعلّم – ميداني
+                    <img alt="شعار منظمة بهار" src="BAHAR.png" style="float: right; max-height: 45px; width: auto; object-fit: contain;"/>
+</div>
+<div class="company-name">منظمة بهار (BAHAR)</div>
+<div class="job-date">ديسمبر 2023 – سبتمبر 2024</div>
+<ul class="job-bullets">
+<li>تصميم أدوات جمع البيانات بالاستناد إلى مؤشرات المشاريع والاستبيانات والمسوح، وتحليل البيانات النوعية والكمية.</li>
+<li>إعداد خطط عمل شهرية ومتابعة جدول تتبع تقدم المؤشرات (IPTT).</li>
+<li>إدارة قواعد بيانات المشاريع ومراجعة البيانات المُدخلة والتحقق من الأخطاء والاحتفاظ بنسخ مؤرشفة واحتياطية.</li>
+<li>الإشراف على أكثر من 27 باحثاً ميدانياً وموظفَين لإدخال البيانات، ودعم عمليات جمع البيانات ميدانياً وفحوصات جودتها.</li>
+<li>تنفيذ زيارات ميدانية لمتابعة تنفيذ خطط المشاريع ودعم تقييمات الاحتياجات ومجموعات النقاش المركزة (FGDs) والمقابلات مع المخبرين الرئيسيين (KIIs) وأنشطة المتابعة بعد التوزيع (PDM).</li>
+<li>إعداد تقارير دورية وتصويرات مرئية للبيانات باستخدام Power BI وتوثيق المعلومات التعليمية والدروس المستفادة.</li>
+<li>متابعة رضا المستفيدين وإدارة تتبع الشكاوى والتغذية الراجعة وتوثيقها.</li>
+</ul>
+</div>
+<!-- Job 5 -->
+<div class="timeline-item">
+<div class="job-title">مدخل بيانات
+                    <img alt="شعار منظمة بهار" src="BAHAR.png" style="float: right; max-height: 45px; width: auto; object-fit: contain;"/>
+</div>
+<div class="company-name">منظمة بهار (BAHAR)</div>
+<div class="job-date">مارس 2023 – ديسمبر 2023</div>
+<ul class="job-bullets">
+<li>تسجيل بيانات المشاريع وقواعد بياناتها وصيانتها بصيغة منظمة وسهلة الوصول.</li>
+<li>حفظ بيانات المشاريع ومشاركتها مع مدير المشروع عبر التطبيقات السحابية وتحديث قواعد البيانات باستمرار.</li>
+<li>تحديث أنظمة الهواتف المحمولة المستخدمة في جمع البيانات وإعداد تقارير الموظفين ومشاركتها.</li>
+<li>أرشفة الملفات الورقية الخاصة بالمشاريع وتصنيفها لتسهيل استرجاعها والوصول إليها.</li>
+</ul>
+</div>
+<!-- Job 6 -->
+<div class="timeline-item">
+<div class="job-title">قائد فريق ميداني
+                     <img alt="شعار منظمة بهار" src="SRRC.jpg" style="float: right; max-height: 70px; width:  90PX; object-fit: contain;"/>
+</div>
+<div class="company-name">الهلال الأحمر العربي السوري (SARC)</div>
+<div class="job-date">سبتمبر 2021 – مارس 2023</div>
+<ul class="job-bullets">
+<li>إجراء المسوح الميدانية وتقييمات الاحتياجات خلال تصميم المشاريع، ودعم تخطيط الأنشطة الميدانية وتنظيمها.</li>
+<li>إعداد خطط تفصيلية للأنشطة الميدانية ومتابعة أداء الفريق من خلال تقارير التقدم اليومية والشهرية.</li>
+<li>معالجة التحديات الميدانية ودعم التنفيذ السلس للأنشطة المخطط لها.</li>
+<li>المشاركة في أنشطة المتابعة والتقييم، وإجراء مقابلات مع المستفيدين وأصحاب المصلحة، والتحقق من دقة البيانات وإدخالها عبر أدوات جمع البيانات الرقمية.</li>
+</ul>
+</div>
+</div>
+<!-- 6. CORE COMPETENCIES & TECHNICAL SKILLS -->
+<section class="section-card" id="skills">
+<h2 class="section-title">المهارات التقنية والكفاءات</h2>
+<div class="skills-grid">
+<div class="skill-box">
+<h4>أدوات المتابعة والتقييم والبيانات</h4>
+<p>KoboToolbox، وPower BI، ونظام المعلومات الصحية (HIS)، ونماذج Google </p>
+</div>
+<div class="skill-box">
+<h4>البرامج والأدوات المكتبية</h4>
+<p>حزمة Microsoft Office (Excel متقدم)، وAdobe Acrobat، وقواعد البيانات السحابية</p>
+</div>
+<div class="skill-box">
+<h4>البرمجة وتطوير الويب</h4>
+<p>Python، وHTML، وCSS، وDAX</p>
+</div>
+<div class="skill-box">
+<h4>التصميم والهندسة</h4>
+<p>Adobe Photoshop، وSolidWorks، وAutomation Studio</p>
+</div>
+<div class="skill-box">
+<h4>اللغات</h4>
+<p><strong>العربية:</strong> اللغة الأم<br/><strong>الإنجليزية:</strong> إجادة مهنية في بيئة العمل</p>
+</div>
+</div>
+</section>
+<!-- 7. SECTORS COVERED -->
+<section class="stats-section" id="sectors">
+<h2 class="section-title">القطاعات والخبرات التشغيلية</h2>
+<div class="stats-grid">
+<div class="stat-card">
+<div class="stat-number">المياه والإصحاح والنظافة (WASH)</div>
+<p>المياه والإصحاح</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">الأمن الغذائي وسبل العيش (FSL)</div>
+<p>الأمن الغذائي وسبل العيش</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">التعافي المبكر (ERL)</div>
+<p>التعافي المبكر</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">المأوى</div>
+<p>المأوى والبنية التحتية</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">الصحة</div>
+<p>الحماية والصحة</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">التعليم</div>
+<p>التعليم غير النظامي / برامج التعلم المعجل والدروس الاستدراكية</p>
+</div>
+<div class="stat-card">
+<div class="stat-number">الإغاثة</div>
+<p>الطوارئ والتوزيعات</p>
+</div>
+</div>
+</section>
+<!-- 8. ACHIEVEMENTS & FIELD GALLERY -->
+<section class="gallery-section" id="gallery">
+<h2 class="section-title">الإنجازات الميدانية وسجل الصور</h2>
+<div class="gallery-grid">
+<!-- Image 1: Group Image PUI Deir ez-Zor 2026 -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="فريق PUI في دير الزور" class="gallery-img" src="Housam Aldeen Ibrahim Alhamad-PUI Organization Team.jpg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">فريق Premiere Urgence Internationale</div>
+<div class="caption-text" style="font-style: italic;">لقاء للفريق الميداني واجتماع لتنسيق العمليات.</div>
+<span class="date-tag">📍 دير الزور | 📅 2026</span>
+</div>
+</div>
+<!-- Image 2: Bahar Organization Raqqa 2026 (Blue Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="منظمة بهار في الرقة" class="gallery-img" src="Housam Aldeen Ibrahim Alhamad-Bahar Organization--Following up FSL project.jpeg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">منظمة بهار – متابعة مشروع الأمن الغذائي وسبل العيش</div>
+<div class="caption-text" style="font-style: italic;">متابعة ميدانية ومراقبة التوزيعات ضمن مشروع الأمن الغذائي وسبل العيش.</div>
+<span class="date-tag">📍 الرقة | 📅 2026</span>
+</div>
+</div>
+<!-- Image 3: PUI Sewage & Shelter Projects -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="مشروع الصرف الصحي لمنظمة PUI" class="gallery-img" src="Housam Aldeen Ibrahim Alhamad-PUI Organization Following up Sewage project2.jpeg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">PUI – الصرف الصحي والبنية التحتية للمأوى</div>
+<div class="caption-text" style="font-style: italic;">متابعة ميدانية مباشرة وتقييم جودة أعمال إعادة تأهيل شبكات الصرف الصحي.</div>
+<span class="date-tag">📍 دير الزور | 📅 2026</span>
+</div>
+</div>
+<!-- Image 4: Red Crescent SARC Selfie 2022 (Red Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="فريق الهلال الأحمر العربي السوري" class="gallery-img" src="Housam Aldeen Ibrahim Alhamad-SARC Team.jpg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">الهلال الأحمر العربي السوري (SARC)</div>
+<div class="caption-text" style="font-style: italic;">قيادة الفريق الميداني وأنشطة تقييم المجتمع.</div>
+<span class="date-tag">📍 الرقة – زور شمر | 📅 2022</span>
+</div>
+</div>
+<!-- Image 4:  Housam Aldeen Ibrahim Alhamad-PUI Organization-Following up Sewage project (Red Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="فريق الهلال الأحمر العربي السوري" class="gallery-img" src="Housam Aldeen Ibrahim Alhamad-PUI Organization-Following up Sewage project.jpeg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">منظمة PUI</div>
+<div class="caption-text" style="font-style: italic;">متابعة مشروع الصرف الصحي والبنية التحتية.</div>
+<span class="date-tag">📍 العشارة | 📅 2022</span>
+</div>
+</div>
+<!-- Image 4:  Housam-Bahar (Red Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="منظمة بهار في مشروع المياه والإصحاح والنظافة" class="gallery-img" src="Housam-Bahar organization - WASH Project.jpg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">منظمة بهار – مشروع المياه والإصحاح والنظافة</div>
+<div class="caption-text" style="font-style: italic;">متابعة أعمال إعادة تأهيل محطة مياه في منطقة الجزيرة ومشروع البنية التحتية.</div>
+<span class="date-tag">📍 جزرة البوحمد | 📅 2024</span>
+</div>
+</div>
+<!-- Image 4:  Housam-Bahar (Red Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="منظمة بهار في المشروع التعليمي" class="gallery-img" src="Housam-Bahar-Education-Rural deer ezzour.jpg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">منظمة بهار – المساءلة </div>
+<div class="caption-text" style="font-style: italic;"> نشاط للمساءلة والتوعية بقنوات تقديم الشكاوى ضمن المشروع التعليمي في ريف دير الزور.</div>
+<span class="date-tag">📍 سوريا | 📅 2025</span>
+</div>
+</div>
+<!-- Image 4:  Housam-Bahar (Red Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="منظمة بهار في المشروع التعليمي" class="gallery-img" src="Housam-Bahar-Distribution.jpg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title">منظمة بهار – التعليم </div>
+<div class="caption-text" style="font-style: italic;"> متابعة توزيع الحقائب والمناهج ضمن المشروع التعليمي في ريف دير الزور.</div>
+<span class="date-tag">📍 ريف دير الزور | 📅 2025</span>
+</div>
+</div>
+<!-- Image 4:  Housam-Bahar (Red Vest) -->
+<div class="gallery-card">
+<div class="img-container">
+<!-- كود استدعاء الصورة ملون -->
+<img alt="  Scientific Field Trip" class="gallery-img" src="Housam -.jpg" style="outline: 2px solid var(--img-highlight);"/>
+</div>
+<div class="caption-box">
+<div class="caption-title"> رحلة علمية ميدانية</div>
+<div class="caption-text" style="font-style: italic;">ذكريات مع زملاء الدراسة في المنطقة الصناعية بحلب.</div>
+<span class="date-tag">📍 حلب | 📅 2021</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. SELECTED TRAININGS -->
+<section class="section-card" id="trainings">
+<h2 class="section-title">أبرز التدريبات والشهادات</h2>
+<ul class="training-list">
+<li>التصميم المرئي للبيانات وتحليلها – الهلال الأحمر العربي السوري / منظمة داري</li>
+<li>إطار الأخلاقيات / منظمة PUI</li>
+<li>أساسيات إدارة المخاطر الأمنية / منظمة PUI</li>
+<li> التصرف بنزاهة / منظمة PUI</li>
+<li>بناء السلام، وتصميم المبادرات، وتحليل النزاعات وحلّها</li>
+<li>الدعم النفسي والصحة النفسية وتحليل الشخصية – الهلال الأحمر العربي السوري</li>
+<li>التوتر والاحتراق الوظيفي وإدارتهما – منظمة الإغاثة الطبية</li>
+<li>التحكم المنطقي القابل للبرمجة (PLC) ومكافحة الحرائق</li>
+<li>القانون الدولي – الهلال الأحمر العربي السوري (SARC)</li>
+<li>التصميم الرقمي باستخدام Adobe Photoshop</li>
+</ul>
+</section>
+<!-- 10. latest News -->
+<section class="section-card" id="Latest-news">
+<h2 class="section-title"> آخر الأخبار </h2>
+<div>
+ <h2>أعمل مع منظمة "بريمير أورجانس إنترناشيونال" (Premier Urgence International) في مدينة دير الزور منذ شهر يوليو.</h2>
+</div>
+</section>
+<section>
+<!-- 11. CONTACT SECTION -->
+<section class="section-card contact-blue-section" id="contact">
+<h2 class="section-title">تواصل</h2>
+<div class="contact-container">
+<a class="contact-card" href="mailto:hussamhammad618@gmail.com">
+            ✉️ البريد الإلكتروني: hussamhammad618@gmail.com
+        </a>
+<a class="contact-card" href="https://teams.microsoft.com/l/chat/0/0?users=hussamhammad618@gmail.com" rel="noopener noreferrer" target="_blank">
+            👥 Microsoft Teams: hussamhammad618@gmail.com
+        <a class="contact-card" href="tel:+963996938954">
+            📞 +963 996 938 954
+        </a>
+<a class="contact-card" href="https://www.facebook.com/share/1DBhgXTS8c/" rel="noopener noreferrer" target="_blue">
+<i class="fa-brands fa-facebook"></i> فيسبوك
+        </a>
+</a></div>
+</section></section></section></div></body>
+</html>
